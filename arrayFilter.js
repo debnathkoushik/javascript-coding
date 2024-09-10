@@ -1,5 +1,5 @@
 /**
- Designing Array.prototype.filter
+ Implement the Array.prototype.filter() method
  */
 Array.prototype.myFilter = function (callbackFn, thisArg) {
 

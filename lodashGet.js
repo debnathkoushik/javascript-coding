@@ -1,5 +1,5 @@
 /**
- Designing Lodash's Get method
+ Implement a function to safely access deeply-nested properties in JavaScript objects
  */
 
 export default function lodashGet(objectParam, pathParam, defaultValue) {
@@ -22,7 +22,7 @@ export default function lodashGet(objectParam, pathParam, defaultValue) {
 
     // if the value provided after traversing pathParam is 'undefined'
     // then, return the defaultValue
-    return returnedValue !== undefined ? returnedValue : defaultValue
+    return returnedValue !== undefined ? returnedValue : defaultValue;
   
     throw 'Not implemented!';
 }
