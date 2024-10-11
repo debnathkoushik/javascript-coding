@@ -1,6 +1,7 @@
 /**
  Implement the Array.prototype.reduce() method
  */
+
 Array.prototype.myReduce = function (callbackFn, initialValue) {
   
     // check if initialValue has any value

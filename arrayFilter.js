@@ -1,6 +1,7 @@
 /**
  Implement the Array.prototype.filter() method
  */
+
 Array.prototype.myFilter = function (callbackFn, thisArg) {
 
     let result = [];

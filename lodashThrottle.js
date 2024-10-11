@@ -3,23 +3,23 @@
  */
 export default function throttle(func, wait) {
 
-
+    // initialise a 'shouldThrottle' variable to control the execution
     let shouldThrottle = false;
      
      return function (...args){
-  
-      // if func() is already called during the wait time
-      // no more call can be made
+      
+      // check no call goes through until the wait time is over
       if (shouldThrottle){
           return;
       }
-      
-      // when set to true
-      // restricts calls made during the wait time
+  
+      // set 'shouldThrottle' to true to make sure
+      // the next invocation of the callback function (func) only occurs
+      // after the 'wait' is over
       shouldThrottle = true;
   
-      // will asign true to 'shouldThrottle' after the wait time is over
-      // so that call can be made
+      // set 'shouldThrottle' to false
+      // so that the callback function (func) can be invoked after the 'wait' time is over
       setTimeout(function(){
         shouldThrottle = false;
       }, wait);
@@ -28,4 +28,4 @@ export default function throttle(func, wait) {
   
      }
     throw 'Not implemented!';
-  }
+}
