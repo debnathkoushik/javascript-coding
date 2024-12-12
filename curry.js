@@ -3,17 +3,15 @@
  */
 
 export default function curry(func) {
-  
-    return function curried(...args) {
+  return function curried(...args) {
+    // func.length is used to calculate the arity of func
+    if (args.length >= func.length) {
+      return func.call(this, ...args);
+    }
 
-      // func.length is used to calculate the arity of func
-      if (args.length >= func.length) {
-        return func.call(this, ...args);
-      }
-  
-      return (arg) =>
-        arg === undefined
-          ? curried.call(this, ...args)
-          : curried.call(this, ...args, arg);
-    };
+    return (arg) =>
+      arg === undefined
+        ? curried.call(this, ...args)
+        : curried.call(this, ...args, arg);
+  };
 }
